@@ -17,6 +17,9 @@ export default async function Home() {
             </div>
         </div>
       </section>
+      <section className="flex flex-col  justify-center items-center gap-4 md:mt-20">
+          <h1 className="text-center text-4xl">Choose what fits you right</h1>
+      </section>
     </>
   );
 }
