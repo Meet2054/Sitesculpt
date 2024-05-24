@@ -6,6 +6,7 @@ import { Check } from "lucide-react";
 import Link from "next/link";
 
 export default async function Home() {
+
   return (
     <>
       <section className="h-full w-full relative pt-36 flex items-center justify-center flex-col ">

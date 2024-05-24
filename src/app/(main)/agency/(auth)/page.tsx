@@ -1,11 +1,11 @@
 import React from 'react'
 
-const page = () => {
+const Page = () => {
   return (
     <div>
-      Domain Path
+      Agency Dashboard
     </div>
   )
 }
 
-export default page
+export default Page
