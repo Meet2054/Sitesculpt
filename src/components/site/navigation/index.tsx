@@ -4,13 +4,14 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import { UserButton } from '@clerk/nextjs'
+
 type Props = {
     user? : null | User
 }
 
 const Navigation = ({user}: Props) => {
   return (
-    <div className='p-4 flex items-center justify-between relative '>
+    <div className='p-4 flex items-center justify-between fixed top-0 left-0 right-0 z-10'>
         <aside className='flex items-center gap-2'>
             <Image src={'./assets/plura-logo.svg'} alt = "Plura Logo replace withyours " width={40} height={40} />
             <span className='text-xl font-bold'>SiteSculpt</span>
@@ -22,9 +23,14 @@ const Navigation = ({user}: Props) => {
           <Link href={'#'}>Documentation</Link>
           <Link href={'#'}>Features</Link>
         </ul>
-      </nav>
+        </nav>
         <aside className='flex items-center gap-2'>
-            <Link href={'/agency/sign-in'} className='bg-primary hover:bg-primary/80 rounded-md text-white p-2 px-4 ' >Logn In</Link>
+        <Link
+          href={'/agency'}
+          className="bg-primary text-white p-2 px-4 rounded-md hover:bg-primary/80"
+        >
+          Login
+        </Link>
         <UserButton/>
         <ModeToggle/>
         </aside>
